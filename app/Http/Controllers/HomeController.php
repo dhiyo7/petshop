@@ -26,6 +26,11 @@ class HomeController extends Controller
         return view('backend.home');
     }
 
+    public function home()
+    {
+        return view('home');
+    }
+
     public function medicine()
     {
         return view('backend.medicine.medicine');
