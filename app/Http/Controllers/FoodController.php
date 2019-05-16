@@ -45,7 +45,10 @@ class FoodController extends Controller
         $this->validate($request, [
             'image' => 'required|mimes:jpg,jpeg,png|max:1024',
             'name' => 'required|string',
-            'price' => 'required|numeric'
+            'price' => 'required|numeric',
+            'seller' => 'required|string',
+            'category' => '',
+            'description' => ''
         ]);
 
         $food = new Food();
@@ -53,6 +56,9 @@ class FoodController extends Controller
         $food->image = $image;
         $food->name = $request->name;
         $food->price = $request->price;
+        $food->seller = $request->seller;
+        $food->category = $request->category;
+        $food->description = $request->description;
         $food->save();
 
         return redirect()->route('admin.food')->with(['success' => 'A new food created successfully']);
@@ -93,7 +99,10 @@ class FoodController extends Controller
         $this->validate($request, [
             'image' => 'mimes:jpg,jpeg,png|max:1024',
             'name' => 'required|string',
-            'price' => 'required|numeric'
+            'price' => 'required|numeric',
+            'seller' => 'required|string',
+            'category' => '',
+            'description' => ''
         ]);
 
         $food = Food::where('id', $id)->first();
@@ -104,6 +113,9 @@ class FoodController extends Controller
         }
         $food->name = $request->name;
         $food->price = $request->price;
+        $food->seller = $request->seller;
+        $food->category = $request->category;
+        $food->description = $request->description;
         $food->update();
         return redirect()->route('admin.food')->with(['success' => 'A chosen food updated successfully']);
     }

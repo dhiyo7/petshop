@@ -82,6 +82,32 @@
                                         </div>
                                     </div>
                                 </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Seller Name <span
+                                                        class="text-danger">*</span></label>
+                                            <input name="seller" required type="text" id="seller" class="form-control"
+                                                   placeholder="Enter seller name">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Category </label>
+                                            <div class="controls">
+                                                <input type="text" name="category" id="category" class="form-control" placeholder="Enter category">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <label class="control-label">Description</label>
+                                            <textarea name="description" id="description" class="form-control" cols="30" rows="10" placeholder="Enter food description"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
                                 <div class="form-actions">
                                     <button type="submit" class="btn btn-outline-success"><i class="fa fa-check"></i>
                                         Save

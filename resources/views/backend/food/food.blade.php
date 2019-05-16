@@ -44,6 +44,9 @@
                                     <th>Image</th>
                                     <th>Food</th>
                                     <th>Price</th>
+                                    <th>Seller</th>
+                                    <th>Category</th>
+                                    <th>Description</th>
                                     <th>Action</th>
                                 </tr>
                                 </thead>
@@ -60,6 +63,9 @@
                                         </td>
                                         <td>{{ $food->name }}</td>
                                         <td>{{ $food->price }}</td>
+                                        <td>{{ $food->seller }}</td>
+                                        <td>{{ $food->category }}</td>
+                                        <td>{{ $food->description }}</td>
                                         <td>
                                             <a href="{{ route('admin.food.edit', $food->id) }}" class="btn btn-xs btn-outline-warning">
                                                 <i class="fa fa-pencil"></i>&ensp;Edit</a>
