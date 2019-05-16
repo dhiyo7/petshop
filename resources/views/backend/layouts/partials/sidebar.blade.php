@@ -2,7 +2,7 @@
     <div class="scroll-sidebar">
         <div class="user-profile"
              style="background: url({{ asset('backend//assets/images/background/user-info.jpg') }}) no-repeat;">
-            <div class="profile-img"><img src="{{ asset('backend/assets/images/users/profile.png') }}" alt="user"/>
+            <div class="profile-img"><img src="{{ asset('backend/assets/images/users/1.jpg') }}" alt="user"/>
             </div>
             <div class="profile-text">
                 <a href="#" class="dropdown-toggle u-dropdown" data-toggle="dropdown" role="button"
@@ -16,19 +16,17 @@
         </div>
         <nav class="sidebar-nav">
             <ul id="sidebarnav">
-                <li class="nav-small-cap">PERSONAL</li>
                 <li>
-                    <a href="{{route('admin.dashboard')}}" aria-expanded="false"><i class="mdi mdi-gauge"></i><span class="hide-menu">Dashboard</span></a>
+                    <a href="{{route('admin.dashboard')}}" aria-expanded="false"><i class="mdi mdi-gauge"></i><span class="hide-menu">&ensp;Dashboard</span></a>
                 </li>
                 <li>
-                    <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false">
-                        <i class="mdi mdi-gauge"></i>
-                        <span class="hide-menu">Dashboard </span>
-                    </a>
-                    <ul aria-expanded="false" class="collapse">
-                        <li><a href="index.html">Dashboard 1</a></li>
-                        <li><a href="index2.html">Dashboard 2</a></li>
-                    </ul>
+                    <a href="{{ route('admin.food') }}" aria-expanded="false"><i class="mdi mdi-food-variant"></i><span class="hide-menu">&ensp;Food</span></a>
+                </li>
+                <li>
+                    <a href="{{ route('admin.medicine') }}" aria-expanded="false"><i class="mdi mdi-medical-bag"></i><span class="hide-menu">&ensp;Medicine</span></a>
+                </li>
+                <li>
+                    <a href="#" aria-expanded="false"><i class="fa fa-dollar"></i><span class="hide-menu">&ensp;PetShop</span></a>
                 </li>
             </ul>
         </nav>
